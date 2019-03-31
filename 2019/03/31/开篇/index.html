@@ -104,18 +104,10 @@
 <meta property="og:site_name" content="DeanZivo&#39;STUDIO">
 <meta property="og:description" content="我不是程序员，却想着干点程序员干的事情。在找一些技术文章的时候，偶然发现的”hexo”这个玩意，原来很多程序员都用这个玩意儿写博客。我也被hexo主题里面的 next 风格页面所吸引。 恩，有点心动，好吧，我也来搭建一个吧。 一路苦逼的啥也不懂，到处找资料查数据，一点一点的慢慢瞎打瞎晃，终于到今天正式把这个博客弄起来，也费了不少力气。 这里要交代一下的是，我只是把我的MacBook Pro搞定了，">
 <meta property="og:locale" content="UTF8">
-<meta property="og:image" content="http://yoursite.com/Users/dean/myblog/image/3478485-81de99996c35fa6b.png">
-<meta property="og:image" content="http://yoursite.com/Users/dean/myblog/image/3478485-cad828d97fb4f8a5.png">
-<meta property="og:image" content="http://yoursite.com/Users/dean/myblog/image/3478485-d451ae9bb81c6d0e.png">
-<meta property="og:image" content="http://yoursite.com/Users/dean/myblog/image/3478485-9a6fe8e8a47d59dc.png">
-<meta property="og:image" content="http://yoursite.com/Users/dean/myblog/image/3478485-92b2d4a66901907b.png">
-<meta property="og:image" content="http://yoursite.com/Users/dean/myblog/image/3478485-f4a1759f76abfc57.png">
-<meta property="og:image" content="http://yoursite.com/Users/dean/myblog/image/3478485-94a0d1a2f04727f6.png">
-<meta property="og:updated_time" content="2019-03-31T12:44:26.992Z">
+<meta property="og:updated_time" content="2019-03-31T12:55:28.657Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的零基础hexo之路(开篇)">
 <meta name="twitter:description" content="我不是程序员，却想着干点程序员干的事情。在找一些技术文章的时候，偶然发现的”hexo”这个玩意，原来很多程序员都用这个玩意儿写博客。我也被hexo主题里面的 next 风格页面所吸引。 恩，有点心动，好吧，我也来搭建一个吧。 一路苦逼的啥也不懂，到处找资料查数据，一点一点的慢慢瞎打瞎晃，终于到今天正式把这个博客弄起来，也费了不少力气。 这里要交代一下的是，我只是把我的MacBook Pro搞定了，">
-<meta name="twitter:image" content="http://yoursite.com/Users/dean/myblog/image/3478485-81de99996c35fa6b.png">
 
 
 
@@ -345,7 +337,7 @@
                 
               
 
-              <time title="Created: 2019-03-31 14:52:37 / Modified: 20:44:26" itemprop="dateCreated datePublished" datetime="2019-03-31T14:52:37+08:00">2019-03-31</time>
+              <time title="Created: 2019-03-31 14:52:37 / Modified: 20:55:28" itemprop="dateCreated datePublished" datetime="2019-03-31T14:52:37+08:00">2019-03-31</time>
             
 
             
@@ -409,9 +401,7 @@
 </blockquote>
 </li>
 <li><p>博客关联到Github仓库<br>首先：进入<a href="https://github.com/" target="_blank" rel="noopener">Github</a>官网，注册账号。创建仓库的名字必须为<strong>username.github.io</strong>，用户名为123456，因此我创建的仓库就是<strong>123456.github.io</strong>，这是很关键的一点，很重要。输入名字后，直接点最下面绿色的按钮，创建新仓库。这一部分基本完成了，接下去需要在终端操作。</p>
-<p><img src="/Users/dean/myblog/image/3478485-81de99996c35fa6b.png" alt="3478485-81de99996c35fa6b"></p>
-<p><img src="/Users/dean/myblog/image/3478485-cad828d97fb4f8a5.png" alt="3478485-cad828d97fb4f8a5"></p>
-<p><img src="/Users/dean/myblog/image/3478485-d451ae9bb81c6d0e.png" alt="3478485-918befac816ff5d6"></p>
+<p>(不知道是不是图片问题，文章发布没有成功，我删了图片试试，图片网上有自己找吧)</p>
 </li>
 </ol>
 <p>   这波操作做完了，就下面一波操作了。</p>
@@ -429,10 +419,8 @@
 <p>关联GitHub账号，免密提交。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 用你注册GitHub时的邮箱号，进行秘钥生成</span><br><span class="line">cd ~</span><br><span class="line">ssh-keygen -t rsa -C &quot;xxxxxxx@qq.com&quot;</span><br><span class="line"># 系统就会生成一个隐藏文件夹.ssh</span><br><span class="line">cd .ssh</span><br><span class="line">ls</span><br><span class="line"># 复制公钥</span><br><span class="line">vim id_rsa.pub</span><br></pre></td></tr></table></figure>
 <p>点击箭头的按钮，进入设置，然后点击SSH and GPG keys，创建新的SSH，将之前复制的公钥黏贴，提交，OK。</p>
-<p><img src="/Users/dean/myblog/image/3478485-9a6fe8e8a47d59dc.png" alt="3478485-9a6fe8e8a47d59dc"></p>
-<p><img src="/Users/dean/myblog/image/3478485-92b2d4a66901907b.png" alt="3478485-92b2d4a66901907b"></p>
-<p><img src="/Users/dean/myblog/image/3478485-f4a1759f76abfc57.png" alt="3478485-f4a1759f76abfc57"></p>
-<p><img src="/Users/dean/myblog/image/3478485-94a0d1a2f04727f6.png" alt="3478485-94a0d1a2f04727f6"><br>注意：私有秘钥和公众秘钥，不要选错了，复制去网上的公有秘钥。</p>
+<p>(不知道是不是图片问题，文章发布没有成功，我删了图片试试，图片网上有自己找吧)</p>
+<p>注意：私有秘钥和公众秘钥，不要选错了，复制去网上的公有秘钥。</p>
 </li>
 <li><p>基本上这样就完事了，可以创建文章等操作了。命令如下：</p>
 <p><code>hexo new &quot;postName&quot;</code>#新建文章<br><code>hexo new page &quot;pageName&quot;</code>#新建页面<br><code>hexo generate</code>#生成静态页面至public目录<br><code>hexo server</code>#开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br><code>hexo deploy</code>#将.deploy目录部署到GitHub<br><code>hexo help</code># 查看帮助<br><code>hexo version</code>#查看Hexo的版本</p>
