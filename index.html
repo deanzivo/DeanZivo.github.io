@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="UTF8">
+<html class="theme-next pisces use-motion" lang="UTF8">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -70,7 +70,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     version: '7.0.1',
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
     back2top: true,
@@ -214,7 +214,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-首页-home menu-item-active">
 
     
     
@@ -224,14 +224,14 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页 Home</a>
 
   </li>
         
         
         
           
-          <li class="menu-item menu-item-archives">
+          <li class="menu-item menu-item-标签-tags">
 
     
     
@@ -241,7 +241,41 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签 tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-分类-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类 categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-归档-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档 archives</a>
 
   </li>
 
@@ -249,9 +283,6 @@
       
     </ul>
   
-
-  
-    
 
   
 
@@ -273,6 +304,9 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
           
           <div id="content" class="content">
             
@@ -338,12 +372,24 @@
                 
               
 
-              <time title="Created: 2019-03-31 14:52:37 / Modified: 21:00:52" itemprop="dateCreated datePublished" datetime="2019-03-31T14:52:37+08:00">2019-03-31</time>
+              <time title="Created: 2019-03-31 14:52:37" itemprop="dateCreated datePublished" datetime="2019-03-31T14:52:37+08:00">2019-03-31</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-07 21:27:22" itemprop="dateModified" datetime="2019-04-07T21:27:22+08:00">2019-04-07</time>
               
             
           </span>
@@ -378,82 +424,22 @@
 
       
         
-          
-            <p>我不是程序员，却想着干点程序员干的事情。在找一些技术文章的时候，偶然发现的”hexo”这个玩意，原来很多程序员都用这个玩意儿写博客。我也被hexo主题里面的 next 风格页面所吸引。</p>
+          <p>我不是程序员，却想着干点程序员干的事情。在找一些技术文章的时候，偶然发现的”hexo”这个玩意，原来很多程序员都用这个玩意儿写博客。我也被hexo主题里面的 next 风格页面所吸引。</p>
 <p>恩，有点心动，好吧，我也来搭建一个吧。</p>
 <p>一路苦逼的啥也不懂，到处找资料查数据，一点一点的慢慢瞎打瞎晃，终于到今天正式把这个博客弄起来，也费了不少力气。 这里要交代一下的是，我只是把我的MacBook Pro搞定了，公司里面一台PC的win7，我实在搞不过来，简而言之，还是macOS系统稍微好弄一点。</p>
-<p>网上hexo技术很多，我这里也不赘述，我之所以写，是怕以后我重新弄的时候，又被弄的糊里糊涂的，算是写一个安装记录吧，以后也可以自己查询回忆一下。</p>
-<ol>
-<li><p>首先是安装Git、Node.js和hexo、还有Typora，我是直接去官网下了安装包git-2.21.0、node-v10.15.3和Typora，Typora是编辑软件，就是我现在正在打字用的软件。<br>地址如下：<br>Gti      <a href="https://sourceforge.net/projects/git-osx-installer/" target="_blank" rel="noopener">https://sourceforge.net/projects/git-osx-installer/</a><br>Node.js    <a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a><br>装好以后 执行：<code>node -v</code> 和 <code>git —version</code>出来版本号就表示好了。</p>
-</li>
-<li><p>开始安装 hexo ，( 可以参考官网文档: <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">https://hexo.io/zh-cn/</a> )</p>
-<ul>
-<li><code>npm install hexo-cli -g</code></li>
-<li><code>hexo init blog</code></li>
-<li><code>cd blog</code></li>
-<li><code>npm install</code></li>
-<li><code>hexo server</code></li>
-</ul>
-<p>我用的命令如下 ：<br> <code>npm install -g hexo-cli</code> 或者<code>npm install hexo-cli -g</code><br>这里提醒一下，最好用<br><code>sudo npm install hexo-cli -g</code>  我试过几次，sudo可以避免权限不足 。<br><code>mkdir blog</code>  创建文件夹<br><code>cd blog</code> 进入目录（ 这里blog可以换成你想用的文件夹名字 ）<br><code>hexo init</code>  在blog文件夹里安装hexo 如果报错加  sudo</p>
-</li>
-<li><p>如果以上都装好了，通过本地服务就可以看hexo装的行不行。<br><code>hexo s</code>   或 <code>hexo server</code>  开启本地服务</p>
-<p>运行成功会跳出：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 可以本地浏览网站了。</p>
-<p>我操作的时候服务报错，错误如下，原因其实是后面关于修改文件没有注意空格的原因，基本上只要安装好，不修改任何东西，不会有什么问题。</p>
-<blockquote>
-<p>使用hexo s或hexo g终端命令是报错ERROR Process failed: _posts/name.md<br>这个报错已经给了提示，在<code>name.md</code>文件的第一行有错误，基本是<code>md</code>语法错误。比如上图的报错是因为在<code>title:</code>的后面写的文章<code>title</code>里有<code>:</code>，所以报错 </p>
-</blockquote>
-</li>
-<li><p>博客关联到Github仓库<br>首先：进入<a href="https://github.com/" target="_blank" rel="noopener">Github</a>官网，注册账号。创建仓库的名字必须为<strong>username.github.io</strong>，用户名为123456，因此我创建的仓库就是<strong>123456.github.io</strong>，这是很关键的一点，很重要。输入名字后，直接点最下面绿色的按钮，创建新仓库。这一部分基本完成了，接下去需要在终端操作。</p>
-<p>(这里原来有几张图，Typora上图比较麻烦，等研究好了再说吧)</p>
-</li>
-</ol>
-<p>   这波操作做完了，就下面一波操作了。</p>
-<p>   首先我们要编辑图中_config.yml文件，这是博客的主要配置文件，在下面一部分，我们要频繁使用这个配置文件，这里先编辑一步，为了管理GitHub账号。</p>
-<p>   进入你的hexo文件夹根目录下，用编辑器打开_config.yml，修改deploy项，如下（根据你的github进行相应更改）</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git       #注意：有的版本type是github</span><br><span class="line">  repo: https://github.com/12345/12345.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>   这个就是在_config.yml文件的最下面，是没有完成的部分，直接找到直接复制就行。</p>
-<ol start="5">
-<li><p>执行产生静态页面命令<br><code>hexo g</code> 或者 <code>hexo generate</code>   这一步基本上不会有什么错误</p>
-</li>
-<li><p>然后进行部署到服务器<br><code>hexo d</code>  或者<code>hexo deploy</code>   这一步或许会报错，执行以下命令</p>
-<p><code>npm install</code>–<code>save hexo-deployer-git</code> 或 <code>npm install hexo-deployer-git —save</code></p>
-<p>然后你需要输入你GitHub的用户名和密码，这样你就就可以使用你的仓库名去访问你的博客主页了。为了每一次部署不必一种输入密码，我们可以生成秘钥，然后提交到GitHub，进行关联，那么你下次就不需要再输入密码了。</p>
-<p>这里缺了一个域名注册及关联的事情，我不需要域名，因此就没有做自有域名这一块的事情。如果需要再自己搜索吧。</p>
-<p>关联GitHub账号，免密提交。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 用你注册GitHub时的邮箱号，进行秘钥生成</span><br><span class="line">cd ~</span><br><span class="line">ssh-keygen -t rsa -C &quot;xxxxxxx@qq.com&quot;</span><br><span class="line"># 系统就会生成一个隐藏文件夹.ssh</span><br><span class="line">cd .ssh</span><br><span class="line">ls</span><br><span class="line"># 复制公钥</span><br><span class="line">vim id_rsa.pub</span><br></pre></td></tr></table></figure>
-<p>点击箭头的按钮，进入设置，然后点击SSH and GPG keys，创建新的SSH，将之前复制的公钥黏贴，提交，OK。</p>
-<p>(这里原来有几张图，Typora上图比较麻烦，等研究好了再说吧)</p>
-<p>注意：私有秘钥和公众秘钥，不要选错了，复制去网上的公有秘钥。</p>
-</li>
-<li><p>基本上这样就完事了，可以创建文章等操作了。命令如下：</p>
-<p><code>hexo new &quot;postName&quot;</code>#新建文章<br><code>hexo new page &quot;pageName&quot;</code>#新建页面<br><code>hexo generate</code>#生成静态页面至public目录<br><code>hexo server</code>#开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br><code>hexo deploy</code>#将.deploy目录部署到GitHub<br><code>hexo help</code># 查看帮助<br><code>hexo version</code>#查看Hexo的版本</p>
-</li>
-<li><p>后面就是关于选hexo的主题和用Typora编辑md文章的事情了。</p>
-<p>我只是简单的用了 next 的主题，并开始了这篇文章的写作。</p>
-<p>等我详细了解并会调整 next主题和 Typora后，再接着写第二篇。</p>
-</li>
-<li><p>最后把一些报错的事情整理一下。</p>
-<blockquote>
-<p>1.出现 error deployer not found:git 或者 error deployer not found:github 的错误<br>解决办法：执行 <code>npm install hexo-deployer-git --save</code></p>
-</blockquote>
-<blockquote>
-<p>2.出现类似 FATAL can not read a block mapping entry; a multiline key may not be an implicit key at line 70, column 1: … 错误<br>解决办法：_config.yml中配置项的冒号后面要用空格隔开，再跟内容</p>
-</blockquote>
-<blockquote>
-<p>3.中文乱码问题<br>解决办法：将文件的内容编码改为UTF8格式</p>
-</blockquote>
-<blockquote>
-<p>4.’hexo sever’能够成功运行，但是localhost:4000无法访问<br>解决办法：执行<code>hexo s -p 5000</code>，改用其他端口启动</p>
-</blockquote>
-</li>
-<li><p>最后我即将发布这篇文章，用了一些Typora的图片插入和文本格式。</p>
-</li>
-</ol>
-
+<p>网上hexo技术很多，我这里也不赘述，我之所以写，是怕以后我重新弄的时候，又被弄的糊里糊涂的，算是写一个安装记录吧，以后也可以自己查询回忆一下。
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/31/开篇/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
-    </div>
+    </p></div>
 
     
 
@@ -677,7 +663,7 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/">
+                  <a href="/archives">
                 
                     <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">posts</span>
@@ -693,12 +679,16 @@
                 <div class="site-state-item site-state-tags">
                   
                     
+                      <a href="/tags/">
+                    
+                  
+                    
                     
                       
                     
                     <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">tags</span>
-                  
+                  </a>
                 </div>
               
             </nav>
@@ -758,7 +748,7 @@
 
 
 
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.0.1</div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.0.1</div>
 
 
 
@@ -846,7 +836,9 @@
   
 
 
-  <script src="/js/src/schemes/muse.js?v=7.0.1"></script>
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
 
 
 
