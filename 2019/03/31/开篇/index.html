@@ -97,14 +97,14 @@
 
 
   <meta name="description" content="我不是程序员，却想着干点程序员干的事情。在找一些技术文章的时候，偶然发现的”hexo”这个玩意，原来很多程序员都用这个玩意儿写博客。我也被hexo主题里面的 next 风格页面所吸引。 恩，有点心动，好吧，我也来搭建一个吧。 一路苦逼的啥也不懂，到处找资料查数据，一点一点的慢慢瞎打瞎晃，终于到今天正式把这个博客弄起来，也费了不少力气。 这里要交代一下的是，我只是把我的MacBook Pro搞定了，">
-<meta name="keywords" content="hexo">
+<meta name="keywords" content="hexo,博客,建站">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我的零基础hexo之路(开篇)">
 <meta property="og:url" content="http://yoursite.com/2019/03/31/开篇/index.html">
 <meta property="og:site_name" content="DeanZivo&#39;STUDIO">
 <meta property="og:description" content="我不是程序员，却想着干点程序员干的事情。在找一些技术文章的时候，偶然发现的”hexo”这个玩意，原来很多程序员都用这个玩意儿写博客。我也被hexo主题里面的 next 风格页面所吸引。 恩，有点心动，好吧，我也来搭建一个吧。 一路苦逼的啥也不懂，到处找资料查数据，一点一点的慢慢瞎打瞎晃，终于到今天正式把这个博客弄起来，也费了不少力气。 这里要交代一下的是，我只是把我的MacBook Pro搞定了，">
 <meta property="og:locale" content="UTF8">
-<meta property="og:updated_time" content="2019-04-07T13:27:22.544Z">
+<meta property="og:updated_time" content="2019-04-07T15:35:45.344Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的零基础hexo之路(开篇)">
 <meta name="twitter:description" content="我不是程序员，却想着干点程序员干的事情。在找一些技术文章的时候，偶然发现的”hexo”这个玩意，原来很多程序员都用这个玩意儿写博客。我也被hexo主题里面的 next 风格页面所吸引。 恩，有点心动，好吧，我也来搭建一个吧。 一路苦逼的啥也不懂，到处找资料查数据，一点一点的慢慢瞎打瞎晃，终于到今天正式把这个博客弄起来，也费了不少力气。 这里要交代一下的是，我只是把我的MacBook Pro搞定了，">
@@ -388,11 +388,29 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-07 21:27:22" itemprop="dateModified" datetime="2019-04-07T21:27:22+08:00">2019-04-07</time>
+                <time title="Modified: 2019-04-07 23:35:45" itemprop="dateModified" datetime="2019-04-07T23:35:45+08:00">2019-04-07</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/网站技术/" itemprop="url" rel="index"><span itemprop="name">网站技术</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -453,7 +471,7 @@
 <p>   这波操作做完了，就下面一波操作了。</p>
 <p>   首先我们要编辑图中_config.yml文件，这是博客的主要配置文件，在下面一部分，我们要频繁使用这个配置文件，这里先编辑一步，为了管理GitHub账号。</p>
 <p>   进入你的hexo文件夹根目录下，用编辑器打开_config.yml，修改deploy项，如下（根据你的github进行相应更改）</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git       #注意：有的版本type是github</span><br><span class="line">  repo: https://github.com/12345/12345.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+   <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">deploy:</span></span><br><span class="line"><span class="symbol">  type:</span> git       <span class="meta">#注意：有的版本type是github</span></span><br><span class="line"><span class="symbol">  repo:</span> https:<span class="comment">//github.com/12345/12345.github.io.git</span></span><br><span class="line"><span class="symbol">  branch:</span> master</span><br></pre></td></tr></table></figure>
 <p>   这个就是在_config.yml文件的最下面，是没有完成的部分，直接找到直接复制就行。</p>
 <ol start="5">
 <li><p>执行产生静态页面命令<br><code>hexo g</code> 或者 <code>hexo generate</code>   这一步基本上不会有什么错误</p>
@@ -463,7 +481,7 @@
 <p>然后你需要输入你GitHub的用户名和密码，这样你就就可以使用你的仓库名去访问你的博客主页了。为了每一次部署不必一种输入密码，我们可以生成秘钥，然后提交到GitHub，进行关联，那么你下次就不需要再输入密码了。</p>
 <p>这里缺了一个域名注册及关联的事情，我不需要域名，因此就没有做自有域名这一块的事情。如果需要再自己搜索吧。</p>
 <p>关联GitHub账号，免密提交。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 用你注册GitHub时的邮箱号，进行秘钥生成</span><br><span class="line">cd ~</span><br><span class="line">ssh-keygen -t rsa -C &quot;xxxxxxx@qq.com&quot;</span><br><span class="line"># 系统就会生成一个隐藏文件夹.ssh</span><br><span class="line">cd .ssh</span><br><span class="line">ls</span><br><span class="line"># 复制公钥</span><br><span class="line">vim id_rsa.pub</span><br></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用你注册GitHub时的邮箱号，进行秘钥生成</span></span><br><span class="line"><span class="keyword">cd</span> ~</span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"xxxxxxx@qq.com"</span></span><br><span class="line"><span class="comment"># 系统就会生成一个隐藏文件夹.ssh</span></span><br><span class="line"><span class="keyword">cd</span> <span class="string">.ssh</span></span><br><span class="line"><span class="keyword">ls</span></span><br><span class="line"><span class="comment"># 复制公钥</span></span><br><span class="line">vim id_rsa.pub</span><br></pre></td></tr></table></figure>
 <p>点击箭头的按钮，进入设置，然后点击SSH and GPG keys，创建新的SSH，将之前复制的公钥黏贴，提交，OK。</p>
 <p>(这里原来有几张图，Typora上图比较麻烦，等研究好了再说吧)</p>
 <p>注意：私有秘钥和公众秘钥，不要选错了，复制去网上的公有秘钥。</p>
@@ -491,6 +509,10 @@
 </li>
 <li><p>最后我即将发布这篇文章，用了一些Typora的图片插入和文本格式。</p>
 </li>
+<li><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">niubia clld </span><br><span class="line">lskjdfl jsdf</span><br></pre></td></tr></table></figure>
+</li>
+<li></li>
+<li></li>
 </ol>
 
       
@@ -517,6 +539,10 @@
           
             <a href="/tags/hexo/" rel="tag"># hexo</a>
           
+            <a href="/tags/博客/" rel="tag"># 博客</a>
+          
+            <a href="/tags/建站/" rel="tag"># 建站</a>
+          
         </div>
       
 
@@ -537,6 +563,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/07/续篇/" rel="prev" title="续篇">
+                续篇 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -596,12 +626,29 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
 
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
               
 
               
@@ -617,7 +664,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
